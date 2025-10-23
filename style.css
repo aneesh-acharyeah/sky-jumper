@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  max-width: 95vw;
+  max-height: 95vh;
+  background: linear-gradient(to top, #4fa3ff, #cce6ff);
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.player {
+  position: absolute;
+  bottom: 50px;
+  left: 170px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #fff, #00bfff);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00bfff;
+  z-index: 10;
+}
+
+.obstacle {
+  position: absolute;
+  top: -100px;
+  left: 150px;
+  width: 70px;
+  height: 40px;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+  transform: rotate(20deg);
+}
+
+.star {
+  position: absolute;
+  top: -50px;
+  left: 200px;
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 50%;
+  box-shadow: 0 0 15px gold;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #f00;
+  max-width: 320px;
+  width: 90%;
+}
+
+.modal h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #f00;
+}
+
+.modal p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+#restart-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#restart-button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
