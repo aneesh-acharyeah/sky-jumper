@@ -1,4 +1,4 @@
-# 🪂 Sky Jumper
+# 🪂 Sky Jumper 
 
 A fun endless-fall game built with HTML, CSS, and JavaScript.
 
